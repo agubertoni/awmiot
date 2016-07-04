@@ -1,0 +1,21 @@
+<template name = "sensorslist">
+    {{#each showSensor}}
+        <ul class="list-group sensor" style="width: 400px">
+            <li class="sensor list-group-item active">
+                <h4>
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    Node {{node}}
+                </h4>
+            </li>
+            <li class="list-group-item">
+                <h4><span class="label label-info">{{flow}}</span> litros en el dia</h4>
+                <h4><span class="label label-warning">{{flow}}</span> litros en la semana</h4>
+                <h4><span class="label label-default">{{flow}}</span> litros en el mes</h4>
+            </li>
+            <li class="list-group-item">
+                actual rate
+            </li>
+        </ul>
+
+    {{/each}}
+</template>
