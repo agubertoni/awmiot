@@ -7,7 +7,6 @@
     "modules/exporting.js",
     "modules/heatmap.js",
     "modules/drilldown.js",
-    "modules/map.js",
-    "themes/sand-signika.js"
+    "modules/map.js"
   ]
 }
