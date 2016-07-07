@@ -27,10 +27,18 @@ Template.flowChart.rendered = function () {
                 // The name of the data record attribute that contains x-values.
                 xkey:    'timestamp',
                 // A list of names of data record attributes that contain y-values.
-                ykeys:   ['value'],
+                ykeys:   ['temp', 'rssi'],
                 // Labels for the ykeys -- will be displayed when you hover over the
                 // chart.
-                labels:  ['Value'],
+                labels:  ['Temp', 'Brix'],
+                postUnits: ['°C'],
+                dateFormat: function(date) {
+                    d = new Date(date);
+                    return d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()+' | '+
+                        d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear();
+                },
+                //goals: [70.0, 30.0],
+                //goalStrokeWidth: 4,
                 resize:  true
             });
         }
